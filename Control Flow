@@ -1,0 +1,18 @@
+# Proposed control flow for base end
+
+main(){
+    yoke_input = get_yoke_input()
+    button_input = get_button_input()
+
+    # Enter coordinate mode
+    if (yoke_input == default_input) and (button_input == pressed):
+        start_time = time()
+    
+        while (time() - start_time) < timeout_time:
+            if has_serial_input:
+                serial_input = get_serial_input()
+                send_to_device(serial_input)
+                break
+    
+Delay()
+}
