@@ -13,6 +13,8 @@ main(){
                 serial_input = get_serial_input()
                 send_to_device(serial_input)
                 break
+    else:
+        send_to_device(yoke_input)
     
 Delay()
 }
